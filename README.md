@@ -1,5 +1,5 @@
 # QuizMasters
-![Screenshot_1635242994](https://user-images.githubusercontent.com/65570444/138857729-ad2a99fa-9f8e-4bde-a1fe-031c7e1d41d4.png
+![Screenshot_1635242994](https://user-images.githubusercontent.com/65570444/138857729-ad2a99fa-9f8e-4bde-a1fe-031c7e1d41d4.png)
 ![Screenshot_1635242997](https://user-images.githubusercontent.com/65570444/138857740-73680b71-b84d-4958-9147-028650320f12.png)
 ![Screenshot_1635243000](https://user-images.githubusercontent.com/65570444/138857748-1978d918-a6f2-43ca-85c0-534ce3ffbde4.png)
 )
