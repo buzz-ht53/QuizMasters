@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ResultActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+
+        android:layout_marginRight="20dp"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/tvresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#4456D9"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="Result"
+            android:textSize="30sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <Button
+        android:id="@+id/saveScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Save My Score" />
+
+    <Button
+        android:id="@+id/displayScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:text="Display All Results" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="7dp"
+        android:backgroundTint="@color/colorEditTextBGColor"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tvCateGk"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="GK"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvScoreGk"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="-"
+
+                android:textAlignment="center"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvCateGk"
+                app:layout_constraintStart_toStartOf="@+id/tvCateGk"
+                app:layout_constraintTop_toBottomOf="@+id/tvCateGk" />
+
+            <TextView
+                android:id="@+id/tvCateSci"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Science"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCateGk"
+                app:layout_constraintStart_toEndOf="@+id/tvCateGk"
+                app:layout_constraintTop_toTopOf="@+id/tvCateGk" />
+
+            <TextView
+                android:id="@+id/tvScoreSci"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvScoreGk"
+                app:layout_constraintEnd_toEndOf="@+id/tvCateSci"
+                app:layout_constraintStart_toStartOf="@+id/tvCateSci"
+                app:layout_constraintTop_toTopOf="@+id/tvScoreGk" />
+
+            <TextView
+                android:id="@+id/tvCateHis"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="History"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCateSci"
+                app:layout_constraintStart_toEndOf="@+id/tvCateSci"
+                app:layout_constraintTop_toTopOf="@+id/tvCateSci" />
+
+            <TextView
+                android:id="@+id/tvScoreHis"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvScoreSci"
+                app:layout_constraintEnd_toEndOf="@+id/tvCateHis"
+                app:layout_constraintStart_toStartOf="@+id/tvCateHis"
+                app:layout_constraintTop_toTopOf="@+id/tvScoreSci" />
+
+            <TextView
+                android:id="@+id/tvCateGeo"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Geography"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCateHis"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvCateHis"
+                app:layout_constraintTop_toTopOf="@+id/tvCateHis" />
+
+            <TextView
+                android:id="@+id/tvScoreGeo"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvScoreHis"
+                app:layout_constraintEnd_toEndOf="@+id/tvCateGeo"
+                app:layout_constraintStart_toStartOf="@+id/tvCateGeo"
+                app:layout_constraintTop_toTopOf="@+id/tvScoreHis" />
+
+            <TextView
+                android:id="@+id/tvCateCon"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Constitution"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCateEco"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Economics"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCateCon"
+                app:layout_constraintEnd_toStartOf="@+id/tvCateCon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvCateCon" />
+
+            <TextView
+                android:id="@+id/tvCateSyn"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Synonym"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCateCon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvCateCon"
+                app:layout_constraintTop_toTopOf="@+id/tvCateCon" />
+
+            <TextView
+                android:id="@+id/tvScoreEco"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="-"
+                android:textAlignment="center"
+
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvCateEco"
+                app:layout_constraintStart_toStartOf="@+id/tvCateEco"
+                app:layout_constraintTop_toBottomOf="@+id/tvCateEco" />
+
+            <TextView
+                android:id="@+id/tvScoreCon"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvCateCon"
+                app:layout_constraintStart_toStartOf="@+id/tvCateCon"
+                app:layout_constraintTop_toTopOf="@+id/tvScoreEco" />
+
+            <TextView
+                android:id="@+id/tvScoreSyn"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvCateSyn"
+                app:layout_constraintStart_toStartOf="@+id/tvCateSyn"
+                app:layout_constraintTop_toTopOf="@+id/tvScoreCon" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>
