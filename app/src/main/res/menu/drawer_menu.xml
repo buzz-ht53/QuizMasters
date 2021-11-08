@@ -2,7 +2,13 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Profile" />
-    <item android:title="Rate the App" />
-    <item android:title="Attribution" />
+    <item
+        android:title="Profile"
+        android:id="@+id/btnProfile" />
+    <item
+        android:title="Rate the App"
+        android:id="@+id/btnRate" />
+    <item
+        android:title="Attribution"
+        android:id="@+id/btnAttribution" />
 </menu>

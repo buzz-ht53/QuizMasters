@@ -4,15 +4,22 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.buzz_ht.quiz.adapter.Adapter;
 import com.buzz_ht.quiz.model.Quiz;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
     ActionBarDrawerToggle actionBarDrawerToggle;
     MaterialToolbar toolbar;
     DrawerLayout drawerLayout;
+    TextView textView;
+    FirebaseAuth firebaseAuth;
+    NavigationView navigationView;
+    LinearLayout forFrags;
 
     RecyclerView recyclerView;
     Adapter adapter;
@@ -35,9 +46,41 @@ public class MainActivity extends AppCompatActivity {
         setUpViews();
         staticData();
 
+
         adapter = new Adapter(MainActivity.this, list);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(adapter);
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                onNavigationItem(item);
+                return false;
+            }
+        });
+    }
+
+    private void onNavigationItem(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.btnProfile:
+
+                Toast.makeText(getApplicationContext(), "HEELLLEELEdasdasdasd", Toast.LENGTH_SHORT).show();
+
+                break;
+
+
+            case R.id.btnAttribution:
+                Toast.makeText(getApplicationContext(), "HEELLLEELEdasdasdasd", Toast.LENGTH_SHORT).show();
+
+                break;
+
+            case R.id.btnRate:
+                Toast.makeText(getApplicationContext(), "HEELLLEELEdasdasdasd", Toast.LENGTH_SHORT).show();
+
+                break;
+
+        }
 
 
     }
@@ -63,7 +106,9 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.appBarMaterial);
         drawerLayout = findViewById(R.id.ll);
         recyclerView = findViewById(R.id.recyclerView);
-
+        firebaseAuth = FirebaseAuth.getInstance();
+        navigationView = findViewById(R.id.navigationView);
+        forFrags = findViewById(R.id.forFrags);
     }
 
     private void setUpViews() {
@@ -77,6 +122,10 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout, R.string.app_name, R.string.app_name);
+
+        View hView = navigationView.getHeaderView(0);
+        TextView textView = hView.findViewById(R.id.textemail);
+        textView.setText(firebaseAuth.getCurrentUser().getEmail());
     }
 
     @Override
@@ -88,4 +137,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }

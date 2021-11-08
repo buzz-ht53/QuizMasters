@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -55,6 +56,11 @@ public class SignUpActivity extends AppCompatActivity {
             etEmail.requestFocus();
             return;
         }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            etEmail.setError("Enter valid email address");
+            etEmail.requestFocus();
+            return;
+        }
         if (password.isEmpty()) {
             etPassword.setError("Password can't be empty");
             etPassword.requestFocus();
@@ -69,7 +75,7 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Account successfully created", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();
-                    //Snackbar.make(ll,"Account Created",Snackbar.LENGTH_LONG).show();
+
                 }
 
             }
@@ -77,7 +83,7 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
 
-                Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Something went wrong, Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -97,6 +103,7 @@ public class SignUpActivity extends AppCompatActivity {
     public void goToLogin(View view) {
 
         startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+        finish();
 
 
     }

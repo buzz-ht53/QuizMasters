@@ -1,29 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     android:orientation="vertical"
     tools:context=".ResultActivity">
 
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/appBarMaterial"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:title="QuizMasters"
+            tools:layout_editor_absoluteY="310dp" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="wrap_content"
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-
-        android:layout_marginRight="20dp"
-        android:gravity="center">
+        android:background="#F1BC66"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AppBar">
 
 
         <TextView
             android:id="@+id/tvresult"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="#4456D9"
+            android:background="#F1BC66"
             android:gravity="center"
             android:padding="30dp"
             android:text="Result"
@@ -37,28 +61,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Save My Score" />
-
-    <Button
-        android:id="@+id/displayScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="150dp"
-        android:text="Display All Results" />
-
+        android:text="Save My Score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:layout_gravity="center"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="7dp"
-        android:backgroundTint="@color/colorEditTextBGColor"
+        android:backgroundTint="#F1BC66"
         app:cardCornerRadius="15dp"
-        app:cardElevation="20dp">
+        app:cardElevation="20dp"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline9">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -70,9 +90,12 @@
                 style="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/black"
                 android:text="GK"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -81,13 +104,14 @@
             <TextView
                 android:id="@+id/tvScoreGk"
                 style="@style/TextAppearance.AppCompat.Body1"
-                android:layout_width="70dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="-"
-
+                android:background="#4527A0"
+                android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
+
                 app:layout_constraintEnd_toEndOf="@+id/tvCateGk"
                 app:layout_constraintStart_toStartOf="@+id/tvCateGk"
                 app:layout_constraintTop_toBottomOf="@+id/tvCateGk" />
@@ -97,9 +121,11 @@
                 style="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:text="Science"
+                android:layout_marginLeft="25dp"
+                android:background="@color/black"
+                android:text="SCI"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/tvCateGk"
@@ -109,10 +135,12 @@
             <TextView
                 android:id="@+id/tvScoreSci"
                 style="@style/TextAppearance.AppCompat.Body1"
-                android:layout_width="70dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:background="#4527A0"
+                android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="@+id/tvScoreGk"
                 app:layout_constraintEnd_toEndOf="@+id/tvCateSci"
@@ -124,9 +152,11 @@
                 style="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:text="History"
+                android:layout_marginLeft="30dp"
+                android:background="@color/black"
+                android:text="HIS"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/tvCateSci"
@@ -136,10 +166,12 @@
             <TextView
                 android:id="@+id/tvScoreHis"
                 style="@style/TextAppearance.AppCompat.Body1"
-                android:layout_width="70dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:background="#4527A0"
+                android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="@+id/tvScoreSci"
                 app:layout_constraintEnd_toEndOf="@+id/tvCateHis"
@@ -149,10 +181,12 @@
             <TextView
                 android:id="@+id/tvCateGeo"
                 style="@style/TextAppearance.AppCompat.Subhead"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="Geography"
+                android:background="@color/black"
+                android:text="GEO"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/tvCateHis"
@@ -163,10 +197,12 @@
             <TextView
                 android:id="@+id/tvScoreGeo"
                 style="@style/TextAppearance.AppCompat.Body1"
-                android:layout_width="70dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:background="#4527A0"
+                android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="@+id/tvScoreHis"
                 app:layout_constraintEnd_toEndOf="@+id/tvCateGeo"
@@ -176,10 +212,13 @@
             <TextView
                 android:id="@+id/tvCateCon"
                 style="@style/TextAppearance.AppCompat.Subhead"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="Constitution"
+                android:layout_marginTop="40dp"
+                android:background="@color/black"
+                android:text="CON"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -190,10 +229,12 @@
             <TextView
                 android:id="@+id/tvCateEco"
                 style="@style/TextAppearance.AppCompat.Subhead"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="Economics"
+                android:background="@color/black"
+                android:text="ECO"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/tvCateCon"
@@ -206,8 +247,10 @@
                 style="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="Synonym"
+                android:background="@color/black"
+                android:text="SYN"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/tvCateCon"
@@ -218,12 +261,12 @@
             <TextView
                 android:id="@+id/tvScoreEco"
                 style="@style/TextAppearance.AppCompat.Body1"
-                android:layout_width="70dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="-"
+                android:background="#4527A0"
+                android:text=""
                 android:textAlignment="center"
-
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 app:layout_constraintEnd_toEndOf="@+id/tvCateEco"
                 app:layout_constraintStart_toStartOf="@+id/tvCateEco"
@@ -232,10 +275,12 @@
             <TextView
                 android:id="@+id/tvScoreCon"
                 style="@style/TextAppearance.AppCompat.Body1"
-                android:layout_width="70dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:background="#4527A0"
+                android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 app:layout_constraintEnd_toEndOf="@+id/tvCateCon"
                 app:layout_constraintStart_toStartOf="@+id/tvCateCon"
@@ -244,20 +289,66 @@
             <TextView
                 android:id="@+id/tvScoreSyn"
                 style="@style/TextAppearance.AppCompat.Body1"
-                android:layout_width="70dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:background="#4527A0"
+                android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 app:layout_constraintEnd_toEndOf="@+id/tvCateSyn"
                 app:layout_constraintStart_toStartOf="@+id/tvCateSyn"
                 app:layout_constraintTop_toTopOf="@+id/tvScoreCon" />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     </com.google.android.material.card.MaterialCardView>
 
+    <Button
+        android:id="@+id/displayScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Display All Results"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

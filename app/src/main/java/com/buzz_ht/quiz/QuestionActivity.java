@@ -185,50 +185,50 @@ public class QuestionActivity extends AppCompatActivity {
         questions.clear();
 
         if (i == 1) {
-            questions.add(new Questions("On whose report President promulgates President Rule in the State?", "Prime Minister", "Governor", "Chief Minister", "Home Minister",
-                    "Chief Minister", "NA"));
-            questions.add(new Questions("Which planet is known as Morning Star as well as Evening Star?", "Mercury", "Jupiter", "Saturn", "Venus", "Saturn", "NA"));
-            questions.add(new Questions("In which one of the following is the Himalayan pass Shipki La located?", "Chandra Valley", "Hunza Valley", "Nubra Valley", "Sutlej Valley",
-                    "Nubra Valley", "NA"));
+            questions.add(new Questions("Among the following places, the average annual rainfall is highest at :", "Chennai", "Kolkata", "Shillong", "Thiruvananthpuram",
+                    "Shillong", "NA"));
+            questions.add(new Questions("Among the following rivers, which one is the longest?", "Godavari", "Krishna", "Mahanadi", "Narmada", "Godavari", "NA"));
+            questions.add(new Questions("Among the following Union Territories of India, which one has the largest size?", "Pondicherry", "Lakshadweep", "Daman and Diu", "Chandigarh",
+                    "Pondicherry", "NA"));
         }
         if (i == 2) {
-            questions.add(new Questions("Which variety of glass is heat resistant ?", "Hard Glass", "Flint Glass", "Pyrex Glass", "Bottle Glass", "Bottle Glass"
+            questions.add(new Questions("In humans, which protein transports oxygen from the lungs to the rest of body ?", "Collagen", "Keratin", "Lectin", "Hemoglobin", "Hemoglobin"
                     , "NA"));
-            questions.add(new Questions("The metal used in storage batteries is:", "Iron", "Copper", "Lead", "Zinc", "Lead", "NA"));
-            questions.add(new Questions("The most abundant element in the earth's crust is:", "O", "Al", "Si", "Fe", "Si", "NA"));
+            questions.add(new Questions("Vinegar is chemically known as", "Butanoic acid", "Ethanoic acid", "Methanoic acid", "Propanoic acid", "Ethanoic acid", "NA"));
+            questions.add(new Questions("Which wave phenomenon is not common to both light and sound waves?", "Diffraction", "Polarisation", "Reflection", "Refraction", "Polarisation", "NA"));
         }
         if (i == 3) {
-            questions.add(new Questions("Which of the following Craftsmanships was not practised by the Aryans?", "Pottery", "Jewellery", "Carpentry", "Blacksmith",
-                    "Carpentry", "NA"));
-            questions.add(new Questions("When was Burma separated from India?", "1942", "1932", "1947", "1937", "1937", "NA"));
-            questions.add(new Questions("The earliest known Indian script is?", "Devanagari", "Kharosti", "Mori", "Brahmi",
-                    "Devanagari", "NA"));
+            questions.add(new Questions("At which place Mohenjodaro is situated?", "Punjab", "Afghanistan", "Gujarat", "Sindh Province of Pakistan",
+                    "Sindh Province of Pakistan", "NA"));
+            questions.add(new Questions("Azad Hind Fauj was founded in 1943 at which place?", "Singapore", "Kuala Lumpur", "Japan", "Mandalay", "Singapore", "NA"));
+            questions.add(new Questions("At which place was the All India Khilafat Conference held in 1919?", "Delhi", "Lucknow", "Kolkata", "Mumbai",
+                    "Delhi", "NA"));
         }
         if (i == 4) {
-            questions.add(new Questions("The Bermuda Triangle lies in", "Eastern South Atlantic Ocean", "Western North Atlantic Ocean", "North Pacific Ocean", "South Pacific Ocean",
-                    "Eastern South Atlantic Ocean", "NA"));
-            questions.add(new Questions("Which one of the following is a landlocked country?", "Bulgaria", "Hungary", "Romania", "Ukraine", "Romania", "NA"));
-            questions.add(new Questions("What is the name of Research Station established by Indian Government for conducting research in Antarctic?", "Dakshin Gangotri", "Yamunotri", "Uttari Gangotri", "None of these",
-                    "Yamunotri", "NA"));
+            questions.add(new Questions("The outermost layer of the Sun is called?", "Lithosphere", "Corona", "Chromosphere", "Photosphere", "Corona", "NA"));
+            questions.add(new Questions("The phases of moon are caused by?", "The revolution of the earth", "The revolution of the moon", "The rotation of the earth", "The rotation of the moon",
+                    "The rotation of the moon", "NA"));
+            questions.add(new Questions("Mana Pass is located in?", "Uttarakhand", "Himachal Pradesh", "Jammu-Kashmir", "Uttar Pradesh",
+                    "Uttarakhand", "NA"));
         }
         if (i == 5) {
-            questions.add(new Questions("In India, the first bank of limited liability managed by Indians and founded in 1881 was:", "Hindustan Commercial Bank", "Oudh Commercial Bank",
-                    "Punjab National Bank", "Punjab and Sind Bank", "Hindustan Commercial Bank", "NA"));
-            questions.add(new Questions("In India, Inflation is measured by the?", "National Income Deflation", "Consumers Price Index for agriculture workers",
-                    "Consumers Price Index for urban non-manual workers", " Wholesale Price Index number", "National Income Deflation", "NA"));
-            questions.add(new Questions("In India, Paper Currency first started in the year?", "1774", "1810", "1852", "1861",
-                    "1774", "NA"));
+            questions.add(new Questions("National Income of a country is also known as?", "Gross domestic product", "Net national product",
+                    "Net Domestic product", "Gross national product", "Net national product", "NA"));
+            questions.add(new Questions("When was the Reserve Bank of India taken over by the Government?", "1945", "1948", "1952", "1956", "1948", "NA"));
+            questions.add(new Questions("The first Bank established in India was:", "Punjab National Bank", "Traders Bank", "State Bank of India", " Bank of Hindustan",
+                    " Bank of Hindustan", "NA"));
         }
         if (i == 6) {
-            questions.add(new Questions("The President may appoint all the following except:", "Prime Minister", "Governor", "High Court judges", "Rajya Sabha Chairman",
-                    "Prime Minister", "NA"));
-            questions.add(new Questions("Plural Theory of Sovereignty emphasises the importance of?", "State", "Religion", "Individual", "Associations", "State", "NA"));
-            questions.add(new Questions("The High Court which has the distinction of having the first woman Chief Justice is ?", "Himachal Pradesh High Court", "Delhi High Court",
-                    "Guwahati High Court", "Allahabad High Court", "Himachal Pradesh High Court", "NA"));
+            questions.add(new Questions("Who is the Chief Law Officer of India ?", "Solicitor General", "Advocate General", "Attorney General", "Secretary, Law Department",
+                    "Attorney General", "NA"));
+            questions.add(new Questions("Who has the authority to proclaim emergency in the States?", "The President", "The Prime Minister", " The Chief Minister", "The Governor",
+                    "The President", "NA"));
+            questions.add(new Questions("The Constitution of India was adopted by the:", "Governor General", "British Parliament",
+                    "Constituent Assembly", "Parliament of India", "Constituent Assembly", "NA"));
         }
         if (i == 7) {
             questions.add(new Questions("BIZARRE", "Colourful", " Exotic", "Comical", "Strange", "Strange", "NA"));
-            questions.add(new Questions("PRUNE", "Impose", "Lengthen", "Trim", "Mix", "Impose", "NA"));
+            questions.add(new Questions("PRUNE", "Impose", "Lengthen", "Trim", "Mix", "Trim", "NA"));
             questions.add(new Questions("MUTATION", "Invariability", "Alteration", "Artificial", "Conspiracy", "Alteration", "NA"));
         }
 
