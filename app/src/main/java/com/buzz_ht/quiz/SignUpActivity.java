@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -67,24 +69,22 @@ public class SignUpActivity extends AppCompatActivity {
             return;
         }
 
-        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-
-                    Toast.makeText(getApplicationContext(), "Account successfully created", Toast.LENGTH_SHORT).show();
+                    // Sign in success, update UI with the signed-in user's information
+                    FirebaseUser user = firebaseAuth.getCurrentUser();
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    Toast.makeText(SignUpActivity.this, "Authentication Successful.",
+                            Toast.LENGTH_SHORT).show();
                     finish();
-
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Toast.makeText(SignUpActivity.this, "Authentication failed.",
+                            Toast.LENGTH_SHORT).show();
                 }
-
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-
-                Toast.makeText(getApplicationContext(), "Something went wrong, Please try again", Toast.LENGTH_SHORT).show();
-
             }
         });
 
